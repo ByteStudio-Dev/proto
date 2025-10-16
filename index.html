@@ -147,6 +147,45 @@
       color: #555;
     }
 
+    /* NEW: Food list section */
+    .food-list {
+      padding: 50px 20px;
+      background-color: #fff8e1;
+      text-align: center;
+    }
+
+    .food-list h2 {
+      font-size: 2rem;
+      color: #ff9800;
+      margin-bottom: 25px;
+    }
+
+    .food-list ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      padding: 0;
+      justify-items: center;
+    }
+
+    .food-list li {
+      background-color: #ffb74d;
+      color: white;
+      padding: 12px 15px;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 250px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .food-list li:hover {
+      background-color: #e68900;
+      transform: scale(1.05);
+    }
+
     footer {
       background-color: #ff9800;
       color: white;
@@ -171,6 +210,10 @@
       }
 
       .menu h2 {
+        font-size: 1.5rem;
+      }
+
+      .food-list h2 {
         font-size: 1.5rem;
       }
     }
@@ -222,6 +265,23 @@
         <p>₱65 — Marinated shredded chicken over steamed rice with rich flavor.</p>
       </div>
     </div>
+  </section>
+
+  <!-- ✅ NEW SECTION ADDED BELOW -->
+  <section class="food-list">
+    <h2>All Available Foods in the Canteen</h2>
+    <ul>
+      <li onclick="window.location.href='#'">Chicken Adobo</li>
+      <li onclick="window.location.href='#'">Pancit Canton</li>
+      <li onclick="window.location.href='#'">Tuna Pastil</li>
+      <li onclick="window.location.href='#'">Chicken Pastil</li>
+      <li onclick="window.location.href='#'">Beef Caldereta</li>
+      <li onclick="window.location.href='#'">Fried Tilapia</li>
+      <li onclick="window.location.href='#'">Pork Menudo</li>
+      <li onclick="window.location.href='#'">Sinigang na Baboy</li>
+      <li onclick="window.location.href='#'">Fried Chicken</li>
+      <li onclick="window.location.href='#'">Lumpiang Shanghai</li>
+    </ul>
   </section>
 
   <footer>
