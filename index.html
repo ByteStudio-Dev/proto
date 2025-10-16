@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Canteen Food Reservation</title>
   <style>
     * {
@@ -20,22 +20,24 @@
     header {
       background-color: #ff9800;
       color: white;
-      padding: 20px 0;
       text-align: center;
+      padding: 20px;
     }
 
     nav {
       background-color: #ffa726;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      gap: 25px;
-      padding: 10px 0;
+      gap: 15px;
+      padding: 10px;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      font-size: 16px;
       transition: color 0.3s;
     }
 
@@ -44,36 +46,54 @@
     }
 
     .hero {
-      background: url('images/chicken-adobo.jpg') center/cover no-repeat;
+      background: url('images/home-bg.jpg') center/cover no-repeat;
       height: 60vh;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      text-align: center;
       color: white;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+      position: relative;
+      padding: 0 20px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    .hero h1,
+    .hero p,
+    .hero button {
+      position: relative;
+      z-index: 2;
     }
 
     .hero h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin-bottom: 15px;
-      text-align: center;
     }
 
     .hero p {
       font-size: 1.2rem;
-      margin-bottom: 25px;
-      text-align: center;
-      max-width: 600px;
+      margin-bottom: 20px;
     }
 
     .hero button {
-      padding: 12px 30px;
       background-color: #ff9800;
       border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
       color: white;
       font-size: 1rem;
-      border-radius: 8px;
       cursor: pointer;
       transition: background-color 0.3s;
     }
@@ -97,17 +117,14 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 25px;
-      justify-items: center;
     }
 
     .menu-item {
       background: white;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       overflow: hidden;
       transition: transform 0.3s;
-      width: 100%;
-      max-width: 300px;
     }
 
     .menu-item:hover {
@@ -137,10 +154,29 @@
       padding: 15px 0;
       margin-top: 40px;
     }
+
+    /* Mobile adjustments */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .hero button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+      }
+
+      .menu h2 {
+        font-size: 1.5rem;
+      }
+    }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Canteen Food Reservation</h1>
     <p>Order your favorite meals ahead of time and skip the line!</p>
@@ -162,37 +198,34 @@
   <section class="menu">
     <h2>Our Best Sellers</h2>
     <div class="menu-container">
-      
       <div class="menu-item">
-        <img src="images/chicken-adobo.jpg" alt="Chicken Adobo">
+        <img src="images/Chicken-Adobo.jpg" alt="Chicken Adobo" />
         <h3>Chicken Adobo</h3>
         <p>₱75 — Classic Filipino dish simmered in soy sauce and vinegar.</p>
       </div>
 
       <div class="menu-item">
-        <img src="images/pancit-canton.jpg" alt="Pancit Canton">
+        <img src="images/pancit canton.jpg" alt="Pancit Canton" />
         <h3>Pancit Canton</h3>
         <p>₱60 — Stir-fried noodles with vegetables, meat, and savory sauce.</p>
       </div>
 
       <div class="menu-item">
-        <img src="images/tuna-pastil.jpg" alt="Tuna Pastil">
+        <img src="images/tuna pastil.jpg" alt="Tuna Pastil" />
         <h3>Tuna Pastil</h3>
         <p>₱65 — Spiced tuna flakes served on warm rice wrapped in banana leaf.</p>
       </div>
 
       <div class="menu-item">
-        <img src="images/chicken-pastil.jpg" alt="Chicken Pastil">
+        <img src="images/chicken pastil.jpg" alt="Chicken Pastil" />
         <h3>Chicken Pastil</h3>
         <p>₱65 — Marinated shredded chicken over steamed rice with rich flavor.</p>
       </div>
-
     </div>
   </section>
 
   <footer>
     <p>© 2025 Canteen Food Reservation | Designed by ByteStudio-Dev</p>
   </footer>
-
 </body>
 </html>
